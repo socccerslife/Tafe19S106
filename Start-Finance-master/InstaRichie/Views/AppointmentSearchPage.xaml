@@ -1,0 +1,76 @@
+﻿<Page
+    x:Class="StartFinance.Views.AppointmentSearchPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StartFinance.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton Icon="Accept" Label="Search Appt" x:Name="btnAccept" Click="btnAccept_Click"/>
+            <AppBarButton Icon="Cancel" Label="Cancel Appt" x:Name="btnCancel" Click="btnCancel_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="PageTitle" Text="Search Appointment" Margin="9,-7,0,0" Style="{StaticResource BodyTextBlockStyle}" Height="39"/>
+        </StackPanel>
+        
+        <!-- ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" HorizontalAlignment="Left" >
+            <StackPanel Margin="9">
+                <StackPanel HorizontalAlignment="Left" Width="328" Orientation="Horizontal" Margin="4,4,0,4"/>
+                <StackPanel HorizontalAlignment="Left" Width="328" Orientation="Horizontal" Margin="4,4,40,4">
+                    <TextBlock Width="130" x:Name="tbAID" Text="Appointment ID" Height="30"/>
+                    <TextBox x:Name="txtAID" Text="" Width="140"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Width="328" Orientation="Horizontal" Margin="4,4,0,4">
+                    <TextBlock Width="130" Name="tbEName" Text="Event Name" Height="30" />
+                    <TextBox x:Name="txtEName" Text="" Width="140"/>
+                </StackPanel>
+                <!--<StackPanel HorizontalAlignment="Left" Width="328" Orientation="Horizontal" Margin="4,4,0,4">
+                    <TextBlock Width="130" Name="tbLocation" Text="Location" Height="30" />
+                    <TextBox x:Name="txtLocation" Text="" Width="140"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Width="328" Orientation="Horizontal" Margin="4,4,0,4">
+                    <TextBlock Width="130" Name="tbEDate" Text="Event Date" Height="30"/>
+                    <TextBox x:Name="txtEDate" Text="" Width="140"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Width="328" Orientation="Horizontal" Margin="4,4,0,4">
+                    <TextBlock Width="130" Name="tbStartTime" Text="Start Time" Height="30"/>
+                    <TextBox x:Name="txtStartTime" Text="" Width="140"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Width="328" Orientation="Horizontal" Margin="4,4,0,4">
+                    <TextBlock Width="130" Name="tbEndTime" Text="End Time" Height="30"/>
+                    <TextBox x:Name="txtEndTime" Text="" Width="140"/>
+                </StackPanel>-->
+                <StackPanel>
+                    <Grid x:Name="ContentPanel2" Margin="12,0,12,0">
+                        <ListBox x:Name="MainListBox" Margin="0,0,-12,0" SelectionChanged="MainListBox_SelectionChanged">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Margin="0,0,0,17" Width="432" Height="78">
+                                        <TextBlock Text="{Binding EventName}" TextWrapping="Wrap" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Grid>
+                </StackPanel>
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

@@ -36,8 +36,9 @@ namespace StartFinance
     {
         private static string Db { get; } = "db.sqlite";
         public static IPersonalRepository Data { get; } = new PersonalRepository(Db);
-        public static Personal personal;
-
+        public static IAppointmentRepository Data { get; } = new AppointmentRepository(Db);
+        public static Appointment appointment;
+         
         public App()
         {
             InitializeComponent();
