@@ -1,5 +1,5 @@
 // **************************************************************************
-//Start Finance - An to manage your personal finances.
+//Start Finance - An to manage your contact finances.
 
 //Start Finance is free software: you can redistribute it and/or modify
 //it under the terms of the GNU General Public License as published by
@@ -36,9 +36,11 @@ namespace StartFinance
     {
         private static string Db { get; } = "db.sqlite";
         public static IPersonalRepository Data { get; } = new PersonalRepository(Db);
+        public static IContactRepository Data { get; } = new ContactRepository(Db);
         public static IAppointmentRepository Data { get; } = new AppointmentRepository(Db);
+		public static Personal personal;
+        public static Contact contact;
         public static Appointment appointment;
-         
         public App()
         {
             InitializeComponent();

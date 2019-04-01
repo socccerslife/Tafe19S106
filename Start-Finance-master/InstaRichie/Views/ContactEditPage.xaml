@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="StartFinance.Views.ContactEditPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StartFinance.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton Icon="Accept" Label="appbarbutton" Click="Accept_Click"/>
+            <AppBarButton Icon="Cancel" Label="appbarbutton" Click="Cancel_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="Edit Contact Info" Style="{StaticResource BodyTextBlockStyle}"/>
+
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <StackPanel Margin="9">
+                <StackPanel HorizontalAlignment="Left" Width="328" Orientation="Horizontal" Margin="4,4,0,4" />
+                <StackPanel HorizontalAlignment="Left" Width="338" Orientation="Horizontal" Margin="4,4,0,4">
+                    <TextBlock  Width="130" Name="tbFirst" Text="First Name:"  Height="30"/>
+                    <TextBox  x:Name="txtFirst" Text="{Binding FirstName}" Width="150"  />
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Width="328" Orientation="Horizontal" Margin="4,4,0,4">
+                    <TextBlock Height="30" Name="tbLast" Text="Last Name:"  Width="130"  />
+                    <TextBox Name="txtLast" Text="{Binding LastName}" Width="150" />
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Width="328" Orientation="Horizontal" Margin="4,4,0,4">
+                    <TextBlock Height="30" Name="tbCompanyName" Text="Company Name:" Width="130" />
+                    <TextBox  Name="txtCompanyName" Text="{Binding CompanyName}" Width="150" />
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Width="328" Orientation="Horizontal" Margin="4,4,0,4" />
+                <StackPanel HorizontalAlignment="Left" Width="328" Orientation="Horizontal" Margin="4,4,0,4" />
+                <StackPanel HorizontalAlignment="Left" Width="328" Orientation="Horizontal" Margin="4,4,0,4" >
+                    <TextBlock Height="30" Name="tbPhone" Text="Phone:" Width="130" />
+                    <TextBox  Name="txtPhone" Text="{Binding Phone}" Width="150" />
+                </StackPanel>
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Page>
