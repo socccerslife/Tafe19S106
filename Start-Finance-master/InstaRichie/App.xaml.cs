@@ -1,5 +1,5 @@
 // **************************************************************************
-//Start Finance - An to manage your personal finances.
+//Start Finance - An to manage your contact finances.
 
 //Start Finance is free software: you can redistribute it and/or modify
 //it under the terms of the GNU General Public License as published by
@@ -24,6 +24,7 @@ using Template10.Common;
 using System;
 using System.Linq;
 using Windows.UI.Xaml.Data;
+using StartFinance.Models;
 
 namespace StartFinance
 {
@@ -33,6 +34,10 @@ namespace StartFinance
     [Bindable]
     sealed partial class App : Template10.Common.BootStrapper
     {
+        private static string Db { get; } = "db.sqlite";
+        public static IContactRepository Data { get; } = new ContactRepository(Db);
+        public static Contact contact;
+
         public App()
         {
             InitializeComponent();
