@@ -35,7 +35,7 @@ namespace StartFinance.Views
         public AppointmentSearchPage()
         {
             this.InitializeComponent();
-            Db = App.Data;
+            Db = App.Data2;
             viewModel = new AppointmentSearchViewModel();
         }
 

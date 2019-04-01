@@ -37,13 +37,13 @@ namespace StartFinance.ViewModels
 
         public AppointmentDetailViewModel(int appointmentId)
         {
-            Db = App.Data;
+            Db = App.Data2;
             this.Appointment = Db.GetAppointmentById(appointmentId);
         }
 
         public AppointmentDetailViewModel()
         {
-            Db = App.Data;
+            Db = App.Data2;
         }
 
         public bool SaveEditedAppointment(Appointment a)

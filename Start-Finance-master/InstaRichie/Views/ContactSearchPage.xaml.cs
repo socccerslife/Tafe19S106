@@ -35,7 +35,7 @@ namespace StartFinance.Views
         public ContactSearchPage()
         {
             this.InitializeComponent();
-            Db = App.Data;
+            Db = App.Data1;
             viewModel = new ContactSearchViewModel();
         }
 

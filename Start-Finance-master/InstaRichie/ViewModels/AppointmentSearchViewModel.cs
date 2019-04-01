@@ -46,7 +46,7 @@ namespace StartFinance.ViewModels
 
         public AppointmentSearchViewModel()
         {
-            Db = App.Data;
+            Db = App.Data2;
         }
 
         public IEnumerable<Appointment> FindAppointment(int id, string eventName)

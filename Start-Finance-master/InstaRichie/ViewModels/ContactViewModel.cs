@@ -29,7 +29,7 @@ namespace StartFinance.ViewModels
 
         public ContactViewModel()
         {
-            Db = App.Data;
+            Db = App.Data1;
         }
 
         public bool IsDataLoaded

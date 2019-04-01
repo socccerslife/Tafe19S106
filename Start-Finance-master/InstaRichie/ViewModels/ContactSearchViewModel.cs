@@ -46,7 +46,7 @@ namespace StartFinance.ViewModels
 
         public ContactSearchViewModel()
         {
-            Db = App.Data;
+            Db = App.Data1;
         }
 
         public IEnumerable<Contact> FindContact(int id, string first, string last, string phone)

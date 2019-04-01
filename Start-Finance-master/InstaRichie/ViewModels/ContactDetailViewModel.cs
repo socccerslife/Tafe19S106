@@ -38,13 +38,13 @@ namespace StartFinance.ViewModels
 
         public ContactDetailViewModel(int contactId)
         {
-            Db = App.Data;
+            Db = App.Data1;
             this.Contact = Db.GetContactById(contactId);
         }
 
         public ContactDetailViewModel()
         {
-            Db = App.Data;
+            Db = App.Data1;
         }
 
         public bool SaveEditedContact(Contact s)

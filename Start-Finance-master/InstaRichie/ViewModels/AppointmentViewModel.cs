@@ -30,7 +30,7 @@ namespace StartFinance.ViewModels
 
         public AppointmentViewModel()
         {
-            Db = App.Data;
+            Db = App.Data2;
         }
 
         public bool IsDataLoaded
