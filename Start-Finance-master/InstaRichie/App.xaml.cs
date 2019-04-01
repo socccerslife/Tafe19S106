@@ -24,6 +24,7 @@ using Template10.Common;
 using System;
 using System.Linq;
 using Windows.UI.Xaml.Data;
+using StartFinance.Models;
 
 namespace StartFinance
 {
@@ -33,6 +34,11 @@ namespace StartFinance
     [Bindable]
     sealed partial class App : Template10.Common.BootStrapper
     {
+
+        private static string Db { get; } = "db.sqlite";
+        public static IAppointmentRepository Data { get; } = new AppointmentRepository(Db);
+        public static Appointment appointment;
+         
         public App()
         {
             InitializeComponent();
