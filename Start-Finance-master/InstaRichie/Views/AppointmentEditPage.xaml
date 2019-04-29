@@ -34,23 +34,23 @@
                 <StackPanel HorizontalAlignment="Left" Width="328" Orientation="Horizontal" Margin="4,4,0,4"/>
                 <StackPanel HorizontalAlignment="Left" Width="328" Orientation="Horizontal" Margin="4,4,0,4">
                     <TextBlock Width="130" Name="tbEName" Text="Event Name: " Height="30" />
-                    <TextBox x:Name="txtEName" Text="" Width="150"/>
+                    <TextBox x:Name="txtEName" Text="{Binding EventName}" Width="150"/>
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Left" Width="328" Orientation="Horizontal" Margin="4,4,0,4">
                     <TextBlock Width="130" Name="tbLocation" Text="Location: " Height="30" />
-                    <TextBox x:Name="txtLocation" Text="" Width="150"/>
+                    <TextBox x:Name="txtLocation" Text="{Binding Location}" Width="150"/>
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Left" Width="328" Orientation="Horizontal" Margin="4,4,0,4">
                     <TextBlock Width="130" Name="tbEDate" Text="Event Date: " Height="30"/>
-                    <TextBox x:Name="txtEDate" Text="" Width="150"/>
+                    <TextBox x:Name="txtEDate" Text="{Binding EventDate}" Width="150"/>
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Left" Width="328" Orientation="Horizontal" Margin="4,4,0,4">
                     <TextBlock Width="130" Name="tbStartTime" Text="Start Time: " Height="30"/>
-                    <TextBox x:Name="txtStartTime" Text="" Width="150"/>
+                    <TextBox x:Name="txtStartTime" Text="{Binding StartTime}" Width="150"/>
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Left" Width="328" Orientation="Horizontal" Margin="4,4,0,4">
                     <TextBlock Width="130" Name="tbEndTime" Text="End Time: " Height="30"/>
-                    <TextBox x:Name="txtEndTime" Text="" Width="150"/>
+                    <TextBox x:Name="txtEndTime" Text="{Binding EndTime}" Width="150"/>
                 </StackPanel>
             </StackPanel>
         </Grid>
